@@ -1,6 +1,6 @@
 # Mazout Electric IoT API Documentation
 
-**Base URL:** `https://api.mazoutelectric.com`
+**Base URL:** `https://api.mazoutelectric.com`\n
 **API Version:** v1.0
 
 ---
