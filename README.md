@@ -81,7 +81,7 @@ All error responses follow [RFC 7807 Problem Details](https://tools.ietf.org/h
   "title": "Invalid Request",
   "status": 400,
   "detail": "'vehicleId' must be a valid UUID",
-  "instance": "/v1/devices/<deviceID>/commands"
+  "instance": "/api/devices/<deviceID>/commands"
 }
 ```
 
@@ -103,11 +103,11 @@ Endpoints related to telemetry, control, and firmware upgrades.
 
 | Method | Endpoint                                                       | Description                    |
 | ------ | -------------------------------------------------------------- | ------------------------------ |
-| GET    | `/v1/devices/{deviceID}/telemetry`                             | Get latest telemetry           |
-| GET    | `/v1/devices/{deviceID}/telemetry?from={ISO8601}&to={ISO8601}` | Get telemetry for a time range |
-| POST   | `/v1/devices/{deviceID}/commands`                              | Send command(s) to device      |
-| POST   | `/v1/devices/{deviceID}/firmware`                              | Initiate OTA firmware upgrade  |
-| GET    | `/v1/devices/{deviceID}/firmware/status?upgradeID={upgradeID}` | Get firmware upgrade status    |
+| GET    | `/api/devices/{deviceID}/telemetry`                             | Get latest telemetry           |
+| GET    | `/api/devices/{deviceID}/telemetry?from={ISO8601}&to={ISO8601}` | Get telemetry for a time range |
+| POST   | `/api/devices/{deviceID}/commands`                              | Send command(s) to device      |
+| POST   | `/api/devices/{deviceID}/firmware`                              | Initiate OTA firmware upgrade  |
+| GET    | `/api/devices/{deviceID}/firmware/status?upgradeID={upgradeID}` | Get firmware upgrade status    |
 
 #### 📤 Command Payload
 
@@ -231,4 +231,4 @@ curl -X POST https://api.mazoutelectric.com/api/vehicles/distance/bulk \
 
 ## 📝 Changelog
 
-* **v1.0** – Initial release: authentication, telemetry, command control, firmware upgrades, and administrative endpoints.
+* **api.0** – Initial release: authentication, telemetry, command control, firmware upgrades, and administrative endpoints.
